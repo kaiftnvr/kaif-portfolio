@@ -1,0 +1,10 @@
+{
+  "name": "kaif-tanveer-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio of Kaif Tanveer, motion, graphic and brand designer.",
+  "author": "Kaif Tanveer",
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}
