@@ -88,3 +88,29 @@ button.btn{background:transparent;color:inherit;cursor:pointer;font-family:var(-
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .sheet{position:relative;width:min(100%,860px);margin:0 auto 36px;background:#f7f5f0;box-shadow:0 0 0 1px var(--line)}
 .sheet canvas{position:absolute;left:0;top:0;width:100%;height:100%;transition:opacity .7s}
+
+
+.nav{flex-wrap:wrap}
+.nav ul{align-items:center}
+.tt{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin-left:4px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.tt:hover{background:var(--ink);color:var(--bg)}
+.tt:active{transform:scale(.95)}
+.tt svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tt .sun{display:none}
+:root[data-theme="dark"] .tt .sun{display:block}
+:root[data-theme="dark"] .tt .moon{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tt .sun{display:block}:root:not([data-theme="light"]) .tt .moon{display:none}}
+
+.flds{display:flex;flex-wrap:wrap;gap:clamp(20px,5vw,64px);margin:0 0 40px}
+.flds[hidden]{display:none}
+.fld{display:flex;flex-direction:column;align-items:center;gap:10px;width:min(260px,44%);text-align:center;color:inherit}
+.fi{display:block;width:100%}
+.fi svg{display:block;width:100%;height:auto;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.fld:hover .fi svg,.fld:focus-visible .fi svg{transform:translateY(-8px) scale(1.04)}
+.fld:active .fi svg{transform:scale(.97)}
+.fl{font:500 clamp(.95rem,1.6vw,1.1rem)/1.25 var(--f);letter-spacing:-.01em;max-width:18ch}
+
+.gallery{display:grid;gap:24px;margin:40px 0}
+.gallery img{display:block;width:100%;max-width:1100px;height:auto}
+.nnfig{margin:0;width:100%;max-width:1100px;aspect-ratio:1000/720;background:#000}
+.nnfig canvas{display:block;width:100%;height:100%}

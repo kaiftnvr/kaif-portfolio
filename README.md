@@ -9,8 +9,11 @@ index.html            Page markup for every view
 assets/
   css/styles.css      Design tokens, layout and components
   js/main.js          Router (URL hash) and project data
+  js/theme.js         Light and dark mode switch
+  js/neurons.js       Zoe page: generative neural-network artwork
   js/cv.js            CV page: particle formation animation
   img/                Portrait
+  img/projects/       Project images
   Kaif_Tanveer_CV.pdf CV download
 favicon.svg
 404.html
