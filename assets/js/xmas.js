@@ -121,16 +121,6 @@ addTree(q('#cvpage .btns .btn.p'),'sr',48);
 /* ---- Santa's sleigh, flying across the hero ---- */
 var top=q('#top');
 if(top&&!RM){
- var sn=document.createElement('div');sn.className='xsnow';sn.setAttribute('aria-hidden','true');
- var cnt=window.innerWidth<600?14:28;
- for(var i=0;i<cnt;i++){
-  var f=document.createElement('i'),sz=2.5+Math.random()*3;
-  f.style.cssText='left:'+(Math.random()*100).toFixed(1)+'%;width:'+sz.toFixed(1)+'px;height:'+sz.toFixed(1)+'px;opacity:'+(.55+Math.random()*.4).toFixed(2)+';animation-duration:'+(10+Math.random()*10).toFixed(1)+'s;animation-delay:-'+(Math.random()*20).toFixed(1)+'s;--dx:'+Math.round((Math.random()-.5)*80)+'px';
-  sn.appendChild(f);
- }
- top.insertBefore(sn,top.firstChild);
-}
-if(top&&!RM){
  var SW=114,SH=52,cwid=116,k2=cwid/SW,ch=Math.round(SH*k2);
  var cv2=document.createElement('canvas');cv2.width=Math.round(cwid*DPR);cv2.height=Math.round(ch*DPR);cv2.style.width=cwid+'px';cv2.style.height=ch+'px';
  var c2=cv2.getContext('2d');c2.setTransform(k2*DPR,0,0,k2*DPR,0,0);
