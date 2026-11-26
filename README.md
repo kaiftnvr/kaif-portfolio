@@ -8,9 +8,11 @@ Personal portfolio of Kaif Tanveer, a motion, graphic and brand designer based i
 index.html            Page markup for every view
 assets/
   css/styles.css      Design tokens, layout and components
+  css/xmas.css        Christmas decorations
   js/main.js          Router (URL hash) and project data
   js/theme.js         Light and dark mode switch
   js/neurons.js       Zoe page: generative neural-network artwork
+  js/xmas.js          Christmas decorations (on from 20 Nov to 6 Jan)
   js/cv.js            CV page: particle formation animation
   img/                Portrait
   img/projects/       Project images

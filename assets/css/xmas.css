@@ -1,0 +1,19 @@
+/* Christmas decorations. Active only when xmas.js adds .xon to <html>. */
+.xt{position:absolute;bottom:calc(100% - 2px);pointer-events:none}
+.xt.sl{left:18px}
+.xt.sr{right:18px}
+.xt canvas{display:block}
+.xtb{position:relative}
+.btns.xm{margin-top:60px}
+.cats.xm{row-gap:50px}
+.xgap{margin-top:18px}
+.xon #top{position:relative}
+.xon #top>.wrap{position:relative;z-index:1}
+.xsnow{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.xsnow i{position:absolute;top:0;border-radius:50%;background:#bfe0ff;box-shadow:0 0 0 1px rgba(110,170,225,.4),0 0 5px rgba(190,225,255,.9);animation:xfall linear infinite}
+@keyframes xfall{from{transform:translate3d(0,-6vh,0)}to{transform:translate3d(var(--dx,20px),108vh,0)}}
+.xsleigh{position:absolute;top:13%;left:0;pointer-events:none;z-index:2;opacity:0;animation:xfly 38s linear infinite 3s}
+.xsleigh canvas{display:block}
+@keyframes xfly{0%{opacity:1;transform:translate3d(-140px,0,0)}18%{transform:translate3d(45vw,-24px,0)}36%{opacity:1;transform:translate3d(calc(100vw + 40px),6px,0)}37%,100%{opacity:0;transform:translate3d(-140px,0,0)}}
+@media (max-width:820px){.btns.xm{margin-top:56px}}
+@media (prefers-reduced-motion:reduce){.xsleigh,.xsnow{display:none}}

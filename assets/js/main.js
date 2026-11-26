@@ -32,10 +32,10 @@ var P={
  zoe:{t:"Zoe",g:"AI assistant · In progress",b:["An AI assistant for freelancers and small businesses. It helps manage clients, projects, deadlines and payments without doing everything by hand.","Most businesses don’t want another chatbot. They want to save time, avoid missed payments and keep client work organised, and Zoe is built around that.","Say a client writes: can you also make three more Instagram posts, and deliver everything by Friday. Zoe spots the new request and checks it against the original scope. It flags the extra work, estimates the effect on the deadline and drafts a professional reply for approval. Once approved, it updates the project.","Version 1 has five features:"],f:["AI client manager","Smart project tracker","Payment tracker","AI communication assistant","Business intelligence"],n:"Business intelligence answers questions like which client owes me the most, or which project is overdue.",x:"I am building it myself, from scratch. It is still in progress.",l:"none",art:"neural"}
 };
 var C={
- graphic:{t:"Graphic design projects",i:["cremm","wallace","hive"]},
- motion:{t:"Motion design projects",i:[],n:"Building. Motion projects will appear here."},
- commercial:{t:"Commercial projects",i:["tannex"]},
- tech:{t:"Tech projects",i:["zoe"]},
+ graphic:{t:"Graphic design projects",i:[],s:[["Cremm Coffee House","cremm"],["WALLACE","wallace"],["Hive","hive"]]},
+ motion:{t:"Motion design projects",i:[],s:[["Coming soon",null]],n:"Building. Motion projects will appear here."},
+ commercial:{t:"Commercial projects",i:[],s:[["Tannex Leather","tannex"]]},
+ tech:{t:"Tech projects",i:[],s:[["Zoe","zoe"]]},
  threed:{t:"Three-dimensional visuals",i:[],s:[["Interior and exterior design","interior"],["Modeling","modeling"]],bk:["types","Back to all types"]},
  interior:{t:"Interior and exterior design",i:[],n:"Building. Three-dimensional interior and exterior projects will appear here.",bk:["threed","Back to three-dimensional visuals"]},
  modeling:{t:"Modeling",i:[],n:"Building. Three-dimensional modeling projects will appear here.",bk:["threed","Back to three-dimensional visuals"]}
@@ -62,7 +62,7 @@ function r(){
   cat.i.forEach(function(id,i){ul.appendChild(rowEl(i,P[id]||F[id],P[id]?id:null));});
   ul.hidden=!cat.i.length;nt.hidden=!cat.n;nt.textContent=cat.n||'';
   var sb=document.getElementById('cSub');sb.textContent='';sb.hidden=!cat.s;
-  (cat.s||[]).forEach(function(x,i){var a=document.createElement('a');a.className='fld';a.href='#'+x[1];var fi=document.createElement('span');fi.className='fi';fi.innerHTML=folderSVG(i);var fl=document.createElement('span');fl.className='fl';fl.textContent=x[0];a.appendChild(fi);a.appendChild(fl);sb.appendChild(a);});
+  (cat.s||[]).forEach(function(x,i){var a=document.createElement(x[1]?'a':'span');a.className=x[1]?'fld':'fld off';if(x[1])a.href='#'+x[1];var fi=document.createElement('span');fi.className='fi';fi.innerHTML=folderSVG(i);var fl=document.createElement('span');fl.className='fl';fl.textContent=x[0];a.appendChild(fi);a.appendChild(fl);sb.appendChild(a);});
   var bk=document.getElementById('cBack');bk.href='#'+(cat.bk?cat.bk[0]:'types');bk.textContent=cat.bk?cat.bk[1]:'Back to all types';
   window.scrollTo(0,0);
  }else if(pr){
