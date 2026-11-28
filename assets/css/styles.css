@@ -116,3 +116,9 @@ button.btn{background:transparent;color:inherit;cursor:pointer;font-family:var(-
 .nnfig canvas{display:block;width:100%;height:100%}
 .fld.off .fi svg{opacity:.55}
 .fld.off:hover .fi svg{transform:none}
+
+/* posters: seven posters drift left to right, fading in, peaking at the centre, fading out */
+#posters{min-height:0;position:relative;z-index:2;overflow-x:clip}
+.pstage{position:relative;width:100%;max-width:1360px;margin:0 auto;overflow:hidden;overflow-x:clip;overflow-y:visible}
+.pp{position:absolute;top:50%;left:0;display:block;height:auto;aspect-ratio:3/4;object-fit:cover;opacity:0;box-shadow:0 14px 40px rgba(0,0,0,.2);will-change:transform,opacity;cursor:zoom-in}
+.pstage.anim .pp{transition:transform .38s cubic-bezier(.2,.8,.2,1),opacity .3s,box-shadow .3s}
